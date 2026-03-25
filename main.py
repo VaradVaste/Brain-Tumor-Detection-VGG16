@@ -1,10 +1,14 @@
+import os
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+
 from flask import Flask, render_template, request, send_from_directory, redirect
 from tensorflow.keras.models import load_model
 from tensorflow.keras.utils import load_img, img_to_array
 import tensorflow as tf
 from werkzeug.utils import secure_filename
 import numpy as np
-import os
+#import os
 
 # ========================
 # App Setup
